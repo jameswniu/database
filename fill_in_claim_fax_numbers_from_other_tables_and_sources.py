@@ -1,15 +1,15 @@
 #! /usr/bin/python3
-
 import os
 import sys
 import re
+
 import psycopg2
 import psycopg2.extras
+
 
 """
 Correct fax #:  586-469-1872
  Failed fax # :   5863231130
-
 """
 
 Dry_run = False     # update db table
@@ -72,8 +72,6 @@ else:
     conn.commit()
 
 
-
-
 """
  Section 2
 
@@ -120,7 +118,6 @@ for ins in rows:
 
 conn.commit()
 print(' Done section 2 !' )
-
 
 
 """
@@ -204,6 +201,7 @@ for state, fax in geico_fax_num.items():
     else:
         cur.execute(sql)
 
+
 #-----------------------------------
 # for Matt legacey data format
 #-----------------------------------
@@ -226,8 +224,6 @@ for state, fax in geico_fax_num.items():
 
 conn.commit()
 print(' Done section 3 !' )
-
-
 
 
 print(' Updating Columbia Mutual fax ... !' )
@@ -273,8 +269,6 @@ for state, fax in columbia_mut_fax_num.items():
 
 conn.commit()
 print(' Done section 4 !' )
-
-
 
 
 """
@@ -328,8 +322,6 @@ conn.commit()
 print(' Done section 5 !' )
 
 
-
-
 """
  Section 6
  Update  AMERISURE INSURANCE
@@ -381,9 +373,6 @@ conn.commit()
 print(' Done section 6 !' )
 
 
-
-
-
 """
  Section 7
  Update  PENNSYLVANIA NATIONAL MUT CAS INS
@@ -415,12 +404,6 @@ for pattern, fax in penns_nat_mut_fax_num.items():
 
 conn.commit()
 print(' Done section 6 !' )
-
-
-
-
-
-
 
 
 print(' Updating bad tax IDs ...' )
