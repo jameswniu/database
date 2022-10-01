@@ -15,7 +15,7 @@ Insert and update records info with other tables accounting for exact duplicates
 
 Mask confidential fields in JSON and store processed records in database.py
 
-Store alerts automatically cross verify status with other tables create report and format it.py
+Store ASC X12 alerts automatically cross verify status with other tables create report and format it.py
 
 Store and manually update ASC X12 alerts table.sql
 
